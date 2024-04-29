@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CaptureCanvas</title>
+    <title>Snapify</title>
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -25,9 +25,18 @@
     </header>
 
     <main>
+        <div class="newImage">
+            <form class="newImageForm">
+                <label for="imageUrl">Add image Url</label>
+                <input type="url" name="imageUrl" id="imageUrl" placeholder="Enter Image URL">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
         <div class="container">
             <div class="gallery" id="galleryContainer"></div>
         </div>
+
+       
 
     </main>
 
