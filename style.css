@@ -49,8 +49,8 @@ nav ul li {
 }
 
 .gallery img {
-    width: 100%;
-    height: auto;
+
+
     width: 550px;
     height: 350px;
     border-radius: 8px;
@@ -58,6 +58,19 @@ nav ul li {
     transition: transform 0.2s ease-in-out;
     object-fit: fill;
     border-radius: 7px;
+}
+
+@media screen and (max-width: 620px) {
+
+    .gallery img {
+        width: 150px;
+        height: 100px;
+
+    }
+    .gallery-heading{
+        display: none;
+    }
+
 }
 
 .gallery div {
