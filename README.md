@@ -8,7 +8,7 @@ A simple photo gallery website built using HTML, CSS, and JavaScript. The websit
 
 ## Demo
 
-[View Demo](https://example.com)
+[View Demo](https://sri-anya.github.io/PhotoGallery/)
 
 ## Features
 
