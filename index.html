@@ -26,9 +26,14 @@
 
     <main>
         <div class="newImage">
-            <form class="newImageForm">
-                <label for="imageUrl">Add image Url</label>
-                <input type="url" name="imageUrl" id="imageUrl" placeholder="Enter Image URL">
+            
+            <form id="newImageForm" class="newImageForm">
+                <h2>Add a Snap</h2>
+                <div class="input1"><label for="imageUrl">URL</label>
+                    <input type="url" name="download_url" id="imageUrl" placeholder="Enter Image URL" required></div>
+                <div class="input2"><label for="imageAuthor">Author</label>
+                    <input type="text" name="author" id="imageAuthor" placeholder="Enter Name" required></div>
+                
                 <button type="submit">Submit</button>
             </form>
         </div>

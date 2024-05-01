@@ -15,7 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to render images in the gallery
     async function renderGallery() {
         const images = await fetchImages();
-        images.forEach(image => {
+        images.forEach(image => renderImage(image));
+    }
+
+    function renderImage(image){
+        {   console.log(image)
             const imageItem = document.createElement("div");
 
             const img = document.createElement("img");
@@ -37,8 +41,21 @@ document.addEventListener("DOMContentLoaded", function () {
             img.addEventListener("mouseleave", () => {
                 authorInfo.style.display = 'none';
             });
-        });
+        }
     }
+
+    document.getElementById("newImageForm").addEventListener('submit',(e)=>{
+        e.preventDefault();
+        console.log(e.target.download_url.value);
+        console.log(e.target.author.value);
+        renderImage({
+            download_url: e.target.download_url.value,
+            author: e.target.author.value
+
+        })
+        document.getElementById("newImageForm").reset()
+        
+    })
 
     // Call renderGallery function to populate the gallery
     renderGallery();
