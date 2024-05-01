@@ -18,8 +18,18 @@ document.addEventListener("DOMContentLoaded", function () {
         images.forEach(image => renderImage(image));
     }
 
-    function renderImage(image){
-        {   console.log(image)
+    function toggleDarkMode() {
+        let element = document.body;
+        element.classList.toggle("dark-mode");
+        let nav = document.getElementsByTagName("nav")[0];
+        nav.classList.toggle("dark-mode-nav");
+        let button = document.getElementById("button");
+        button.classList.toggle("dark-submit-button");
+    }
+
+    function renderImage(image) {
+        {
+            console.log(image)
             const imageItem = document.createElement("div");
 
             const img = document.createElement("img");
@@ -44,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    document.getElementById("newImageForm").addEventListener('submit',(e)=>{
+    document.getElementById("newImageForm").addEventListener('submit', (e) => {
         e.preventDefault();
         console.log(e.target.download_url.value);
         console.log(e.target.author.value);
@@ -54,8 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         })
         document.getElementById("newImageForm").reset()
-        
+
     })
+
+    document.getElementById("dark").addEventListener('click', toggleDarkMode);
+
 
     // Call renderGallery function to populate the gallery
     renderGallery();
