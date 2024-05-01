@@ -1,17 +1,17 @@
-*{
+* {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
 
-body{
-    background-color:rgba(255, 254, 254, 0.773);
+body {
+    background-color: rgba(255, 254, 254, 0.773);
     color: black;
 }
 
 
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,10 +23,10 @@ nav{
 
 }
 
-ul{
+ul {
     display: flex;
     justify-content: space-between;
-    gap:20px;
+    gap: 20px;
 }
 
 nav ul li {
@@ -59,33 +59,35 @@ nav ul li {
     object-fit: fill;
     border-radius: 7px;
 }
-.gallery div{
+
+.gallery div {
     position: relative;
 }
-.authorText{
+
+.authorText {
     width: 225px;
-    display:none;
+    display: none;
     position: absolute;
-    top:150px;
-    left:190px;
+    top: 150px;
+    left: 190px;
     z-index: 2;
     font-size: larger;
     text-wrap: wrap;
-    font-style:italic;
+    font-style: italic;
     font-weight: 800;
     cursor: pointer;
 }
 
-.gallery img:hover{
+.gallery img:hover {
     transform: scale(1.0005);
     filter: blur(2px);
 }
 
-.newImageForm{
+.newImageForm {
     display: flex;
     flex-direction: column;
-    gap:10px;
-    justify-content:flex-start;
+    gap: 10px;
+    justify-content: flex-start;
     align-items: center;
     padding: 60px;
 }
@@ -93,34 +95,47 @@ nav ul li {
 input {
     width: 50vw;
     padding: 5px;
-  }
+}
 
-.newImageForm button{
+.newImageForm button {
     background-color: #8b2c85bc;
-    padding: 5px 25px;
-    border-radius: 5px;
+    padding: 8px 25px;
+    border-radius: 7px;
     border: none;
-    color:  rgba(255, 254, 254, 0.773);
+    color: rgba(255, 254, 254, 0.773);
+    font-size: medium;
 }
 
 .dark-mode {
-    background-color:#212021ba;
+    background-color: #212021ba;
     color: rgba(255, 254, 254, 0.773);
-  }
-  .dark-mode-nav {
-    background-color: #e3bce1;;
-    color: black;
-  }
-
-  .dark-submit-button{
-    background-color: #e3bce1;;
-    color: black;
-
-  }
-
-.light_mode_symbol{
-    display: none;
 }
-#dark{
+
+.light-mode-body {
+    background-color: rgba(255, 254, 254, 0.773);
+    color: black;
+}
+
+.light-mode-nav {
+    color: rgba(255, 254, 254, 0.773);
+    background-color: #8b2c85bc;
+}
+
+.dark-mode-nav {
+    background-color: #e3bce1;
+    color: black;
+}
+
+.dark-submit-button {
+    background-color: #e3bce1;
+    color: black;
+}
+
+#light-mode {
+    display: none;
+    cursor: pointer;
+}
+
+#dark {
     cursor: pointer;
 }

@@ -18,33 +18,40 @@ document.addEventListener("DOMContentLoaded", function () {
         images.forEach(image => renderImage(image));
     }
 
+    // Function to switch to Light mode
     function toggleDarkMode() {
-        let element = document.body;
-        element.classList.toggle("dark-mode");
+        let body = document.body;
+        body.className = ("dark-mode");
         let nav = document.getElementsByTagName("nav")[0];
-        nav.classList.toggle("dark-mode-nav");
-        let button = document.getElementById("button");
-        button.classList.toggle("dark-submit-button");
+        nav.className = ("dark-mode-nav");
+        document.getElementById("light-mode").style.display = "block";
+        document.getElementById("dark").style.display = "none";
     }
 
+    // Function to switch to Dark mode
+    function toggleLightMode() {
+        document.getElementById("light-mode").style.display = "none";
+        document.getElementById("dark").style.display = "block";
+        let body = document.body;
+        body.className = ("light-mode-body");
+        let nav = document.getElementsByTagName("nav")[0];
+        nav.className = ("light-mode-nav");
+    }
+
+
+    // Function to render a single Image
     function renderImage(image) {
         {
-            console.log(image)
             const imageItem = document.createElement("div");
-
             const img = document.createElement("img");
             img.src = image.download_url;
             img.alt = image.author;
-
             const authorInfo = document.createElement('p');
             authorInfo.innerText = `Author: ${image.author}`;
             authorInfo.classList.add("authorText");
             imageItem.appendChild(authorInfo);
             imageItem.appendChild(img);
             galleryContainer.appendChild(imageItem);
-
-
-
             img.addEventListener("mouseenter", () => {
                 authorInfo.style.display = 'block';
             });
@@ -54,10 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+
     document.getElementById("newImageForm").addEventListener('submit', (e) => {
         e.preventDefault();
-        console.log(e.target.download_url.value);
-        console.log(e.target.author.value);
         renderImage({
             download_url: e.target.download_url.value,
             author: e.target.author.value
@@ -67,7 +73,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     })
 
+    // Call toggleDarkMode when darkMode button is clicked
     document.getElementById("dark").addEventListener('click', toggleDarkMode);
+
+
+    // Call toggleLightMode when lightMode button is clicked
+    document.getElementById("light-mode").addEventListener('click', toggleLightMode);
 
 
     // Call renderGallery function to populate the gallery
