@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+function photoGallery(){
     const galleryContainer = document.getElementById("galleryContainer");
 
     // Function to fetch images from Lorem Picsum API
@@ -41,24 +41,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to render a single Image
     function renderImage(image) {
-        {
-            const imageItem = document.createElement("div");
-            const img = document.createElement("img");
-            img.src = image.download_url;
-            img.alt = image.author;
-            const authorInfo = document.createElement('p');
-            authorInfo.innerText = `Author: ${image.author}`;
-            authorInfo.classList.add("authorText");
-            imageItem.appendChild(authorInfo);
-            imageItem.appendChild(img);
-            galleryContainer.appendChild(imageItem);
-            img.addEventListener("mouseenter", () => {
-                authorInfo.style.display = 'block';
-            });
-            img.addEventListener("mouseleave", () => {
-                authorInfo.style.display = 'none';
-            });
-        }
+
+        const imageItem = document.createElement("div");
+        const img = document.createElement("img");
+        img.src = image.download_url;
+        img.alt = image.author;
+        const authorInfo = document.createElement('p');
+        authorInfo.innerText = `Author: ${image.author}`;
+        authorInfo.classList.add("authorText");
+        imageItem.appendChild(authorInfo);
+        imageItem.appendChild(img);
+        galleryContainer.appendChild(imageItem);
+        img.addEventListener("mouseenter", () => {
+            authorInfo.style.display = 'block';
+        });
+        img.addEventListener("mouseleave", () => {
+            authorInfo.style.display = 'none';
+        });
+
     }
 
 
@@ -83,4 +83,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Call renderGallery function to populate the gallery
     renderGallery();
-});
+
+}
+photoGallery()

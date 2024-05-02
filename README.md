@@ -4,7 +4,7 @@
 [![CSS badge](https://img.shields.io/badge/CSS-Used_for_styling-blue?style=flat-square)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![JavaScript badge](https://img.shields.io/badge/JavaScript-Used_for_interactive_features-yellow?style=flat-square)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-A simple photo gallery website built using HTML, CSS, and JavaScript. The website fetches 20 images from the [Lorem Picsum API](https://picsum.photos/v2/list) and displays them in a grid layout. Hovering over the images scales them and displays the author information.
+A simple responsive photo gallery website built using HTML, CSS, and JavaScript. The website fetches 20 images from the [Lorem Picsum API](https://picsum.photos/v2/list) and displays them in a grid layout. Hovering over the images scales them and displays the author information.
 
 ## Demo
 
