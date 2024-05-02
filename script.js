@@ -51,7 +51,7 @@ function photoGallery(){
         authorInfo.classList.add("authorText");
         imageItem.appendChild(authorInfo);
         imageItem.appendChild(img);
-        galleryContainer.appendChild(imageItem);
+        galleryContainer.prepend(imageItem);
         img.addEventListener("mouseenter", () => {
             authorInfo.style.display = 'block';
         });

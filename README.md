@@ -15,7 +15,7 @@ A simple responsive photo gallery website built using HTML, CSS, and JavaScript.
 - Fetches 20 images from the Lorem Picsum API in a single request.
 - Displays images in a grid layout with responsive design.
 - On hovering over images, they scale and display author information.
-- Ability to add new images to the webpage without using the POST method.
+- Ability to add new images to the to of the gallery in the webpage.
 
 ## Usage
 
