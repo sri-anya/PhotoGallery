@@ -52,10 +52,12 @@ function photoGallery(){
         imageItem.appendChild(authorInfo);
         imageItem.appendChild(img);
         galleryContainer.prepend(imageItem);
-        img.addEventListener("mouseenter", () => {
+        img.addEventListener("mouseenter", (e) => {
+           
             authorInfo.style.display = 'block';
         });
         img.addEventListener("mouseleave", () => {
+            e.stopPropagation();
             authorInfo.style.display = 'none';
         });
 
