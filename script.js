@@ -1,4 +1,4 @@
-function photoGallery(){
+function photoGallery() {
     const galleryContainer = document.getElementById("galleryContainer");
 
     // Function to fetch images from Lorem Picsum API
@@ -41,7 +41,6 @@ function photoGallery(){
 
     // Function to render a single Image
     function renderImage(image) {
-
         const imageItem = document.createElement("div");
         const img = document.createElement("img");
         img.src = image.download_url;
@@ -53,26 +52,23 @@ function photoGallery(){
         imageItem.appendChild(img);
         galleryContainer.prepend(imageItem);
         img.addEventListener("mouseenter", (e) => {
-           
+
             authorInfo.style.display = 'block';
         });
         img.addEventListener("mouseleave", () => {
             e.stopPropagation();
             authorInfo.style.display = 'none';
         });
-
     }
 
-
+    // Get new Image details
     document.getElementById("newImageForm").addEventListener('submit', (e) => {
         e.preventDefault();
         renderImage({
             download_url: e.target.download_url.value,
             author: e.target.author.value
-
         })
         document.getElementById("newImageForm").reset()
-
     })
 
     // Call toggleDarkMode when darkMode button is clicked

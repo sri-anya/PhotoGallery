@@ -18,7 +18,7 @@ nav {
     padding: 20px 20px;
     color: rgba(255, 254, 254, 0.773);
     font-weight: 400;
-    background-color: #8b2c85bc;
+    background-color: #61295c;
     box-shadow: 0px 5px 6px rgba(93, 70, 91, 0.862);
 
 }
@@ -131,7 +131,7 @@ input {
 
 .light-mode-nav {
     color: rgba(255, 254, 254, 0.773);
-    background-color: #8b2c85bc;
+    background-color: #61295c;
 }
 
 .dark-mode-nav {
